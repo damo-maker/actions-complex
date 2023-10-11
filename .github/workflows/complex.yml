@@ -12,4 +12,4 @@ jobs:
       with: 
         format: "yyyy-MM-dd"
     - name: Set Date
-      run: echo Date
+      run: echo "github-action-current-date-time@v1"
