@@ -12,4 +12,4 @@ jobs:
     - name: Dynamically set MY_DATE environment variable
       run: echo "MY_DATE = $(date + "%Y-%m-%d")" >> $GITHUB_ENV
     - name: Test MY_DATE variable
-      run: echo ${{ MY_DATE.env }} 
+      run: echo ${{ env.MY_DATE }} 
