@@ -30,12 +30,12 @@ jobs:
     runs-on: macos-latest
     steps:
     - name: Current date
-      id: date
+      id: DATE
       run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
     - name: Test with environment variables
       run: echo $DATE
       env:
-        DATE: ${{ steps.date.outputs.date }}
+        DATE: ${{ steps.DATE.outputs.date }}
 
 
       
