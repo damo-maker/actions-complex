@@ -11,6 +11,6 @@ jobs:
       id: date
       run: echo "DATE = $(date + '%d-%m-%Y')" >> $GITHUB_OUTPUT
     - name: Test with environment variables
-      run: echo $DATE
+      run: echo $GITHUB_OUTPUT
       env:
         DATE: 
