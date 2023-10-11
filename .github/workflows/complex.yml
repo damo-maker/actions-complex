@@ -7,7 +7,9 @@ jobs:
     name: First job
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-    - uses: actions/checkout@v2
-    - name: Dynamically set MY_DATE environment variable
-      run: echo "$(date + "%Y-%m-%d")" >> ${TIME}
+    - name: Date
+    - uses: Kaven-Universe/github-action-current-date-time@v1
+      with: 
+        format: "yyyy-MM-dd"
+    - name: Set Date
+      run: echo Date
