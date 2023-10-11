@@ -9,7 +9,9 @@ jobs:
     steps:
     - name: Get current date
       id: date
-      run: echo "DATE = $(date + '%d-%m-%Y')" >> $GITHUB_OUTPUT
-    - name: Print the date
-      run: echo "The date is ${{ steps.date.outputs.date }}" 
+      run: echo "DATE = $(date + '%d-%m-%Y')" >> $GITHUB_ENV
+    - name: Test DATE variable
+      run: echo ${{ env.DATE }}
+
+      
 
