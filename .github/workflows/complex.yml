@@ -8,10 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Get current date
-      id: date
-      run: echo "DATE = $(date + '%d-%m-%Y')" >> $GITHUB_ENV
-    - name: Test DATE variable
-      run: echo ${{ env.DATE }}
+      run: |
+        echo "DATE = $(date + '%d-%m-%Y')" >> ${GITHUB_ENV}
+
 
       
 
