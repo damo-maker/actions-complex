@@ -11,7 +11,7 @@ jobs:
       id: date
       run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_ENV
     - name: Test the date
-      run: echo $DATE
+      run: echo date
       env:
         DATE: ${{ steps.date.outputs.date }}
   job2:
