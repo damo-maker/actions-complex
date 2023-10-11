@@ -7,9 +7,6 @@ jobs:
     name: First job
     runs-on: ubuntu-latest
     steps:
-    - name: Date
-    - uses: Kaven-Universe/github-action-current-date-time@v1
-      with: 
-        format: "yyyy-MM-dd"
-    - name: Set Date
-      run: echo "github-action-current-date-time@v1"
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
