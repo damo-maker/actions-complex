@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Get current date
-      id: Date
+      id: date
       run: echo "::set-output name=date::$(date + '%d-%m-%Y')"
     - name: Test with environment variables
       run: echo $DATE
