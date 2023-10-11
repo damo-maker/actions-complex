@@ -11,7 +11,9 @@ jobs:
       run: |
         echo "DATE = $(date + '%d-%m-%Y')" >> $GITHUB_ENV
     - name: Print the current date
-      run: echo ${{ env.DATE }}
+      run: echo $DATE
+      env:
+        DATE: ${{ steps.date.outputs.DATE }}
 
 
 
