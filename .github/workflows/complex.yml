@@ -4,12 +4,12 @@ on: push
 
 jobs:
   job1:
-  name: First job
-  runs-on: ubuntu-latest
-  steps:
-  - name: Checkout
-  - uses: actions/checkout@v2
-  - name: Dynamically set MY_DATE environment variable
-    run: echo "MY_DATE = $(date + "%Y-%m-%d")" >> $GITHUB_ENV
-  - name: Test MY_DATE variable
-    run: echo ${{ MY_DATE.env }} 
+    name: First job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+    - uses: actions/checkout@v2
+    - name: Dynamically set MY_DATE environment variable
+      run: echo "MY_DATE = $(date + "%Y-%m-%d")" >> $GITHUB_ENV
+    - name: Test MY_DATE variable
+      run: echo ${{ MY_DATE.env }} 
