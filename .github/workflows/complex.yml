@@ -9,7 +9,10 @@ jobs:
     steps:
     - name: Get current date
       run: |
-        echo "DATE = $(date + '%d-%m-%Y')" >> ${GITHUB_ENV}
+        echo "DATE = $(date + '%d-%m-%Y')" >> $GITHUB_ENV
+    - name: Print the current date
+      run: echo ${{ env.DATE }}
+
 
 
       
