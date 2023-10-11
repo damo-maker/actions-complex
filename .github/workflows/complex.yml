@@ -13,14 +13,14 @@ jobs:
     - name: Test the date
       run: echo $DATE
       env:
-       # DATE: ${{ steps.date.outputs.date }}
+        DATE: ${{ steps.date.outputs.date }}
   job2:
     name: Second job
     runs-on: windows-latest
     steps:
     - name: Get date
       id: Date
-      run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_OUTPUT
+      run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_ENV
     - name: Test what is the date
       run: echo $DATE
       env:
@@ -31,7 +31,7 @@ jobs:
     steps:
     - name: Current date
       id: date
-      run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_OUTPUT
+      run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_ENV
     - name: Test with environment variables
       run: echo $DATE
       env:
@@ -43,7 +43,7 @@ jobs:
     steps:
     - name: What's the date?
       id: Calendar
-      run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_OUTPUT
+      run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_ENV
     - name: Print the date    
       run: echo $DATE
       env:
