@@ -11,5 +11,5 @@ jobs:
       id: date
       run: echo "DATE = $(date + '%d-%m-%Y')" >> $GITHUB_OUTPUT
     - name: Print the date
-      run: echo "The date is ${{ steps.date.outputs.date }}" 
+      run: echo "The date is ${{ steps.date.outputs.DATE }}" 
 
