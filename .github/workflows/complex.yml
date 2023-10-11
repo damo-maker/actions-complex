@@ -10,4 +10,4 @@ jobs:
     - name: Checkout
     - uses: actions/checkout@v2
     - name: Dynamically set MY_DATE environment variable
-      run: echo "$(date + "%Y-%m-%d")" >> $GITHUB_ENV
+      run: echo "$(date + "%Y-%m-%d")" >> ${TIME}
