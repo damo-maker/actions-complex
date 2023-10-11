@@ -20,7 +20,7 @@ jobs:
     steps:
     - name: Get date
       id: Date
-      run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
+      run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_OUTPUT
     - name: Test what is the date
       run: echo $DATE
       env:
@@ -31,7 +31,7 @@ jobs:
     steps:
     - name: Current date
       id: date
-      run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
+      run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_OUTPUT
     - name: Test with environment variables
       run: echo $DATE
       env:
@@ -43,7 +43,7 @@ jobs:
     steps:
     - name: What's the date?
       id: Calendar
-      run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
+      run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_OUTPUT
     - name: Print the date    
       run: echo $DATE
       env:
