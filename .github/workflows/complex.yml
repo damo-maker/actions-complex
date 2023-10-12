@@ -7,13 +7,14 @@ jobs:
     name: First job
     runs-on: ubuntu-latest
     steps:
+      env:
+        DATE: ${{ steps.date.outputs.date }}
     - name: Get current date
       id: date
       run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_ENV
     - name: Test the date
-      env:
-        DATE: ${{ steps.date.outputs.date }}
-      run: echo "${{ENV.DATE}}"
+      run: echo $DATE
+
   job2:
     name: Second job
     runs-on: windows-latest
