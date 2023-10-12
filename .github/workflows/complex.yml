@@ -13,7 +13,7 @@ jobs:
     - name: Test the date
       env:
         DATE: ${{ steps.date.outputs.date }}
-      run: ${{ env.DATE }}
+      run: echo "DATE: ${{ steps.date.outputs.date }}"
   job2:
     name: Second job
     runs-on: windows-latest
