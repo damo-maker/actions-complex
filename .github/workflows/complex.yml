@@ -12,10 +12,10 @@ jobs:
       run: echo "date = $(date +'%d-%m-%Y')" >> $GITHUB_ENV
     - name: Test the date
       env:
-        DATE: ${{ env.GITHUB_ENV }}
+        DATE: $GITHUB_ENV
       run: | 
         date
-        echo "${{ env.DATE }}"
+        echo "$DATE"
 
   job2:
     name: Second job
