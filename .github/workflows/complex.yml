@@ -15,7 +15,7 @@ jobs:
         DATE: ${{ env.GITHUB_ENV }}
       run: | 
         date
-        echo "${{ env.GITHUB_ENV }}
+        echo "${{ env.GITHUB_ENV }}"
 
   job2:
     name: Second job
