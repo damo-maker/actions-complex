@@ -15,7 +15,7 @@ jobs:
         DATE: ${{ steps.date.outputs.date }}
       run: | 
         date
-        $GITHUB_ENV
+
 
   job2:
     name: Second job
